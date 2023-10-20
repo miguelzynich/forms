@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Formulário com Fake Loading</title>
+</head>
+
+<body>
+  <form id="myForm" onsubmit="submitForm(event)">
+    <h1>Formulário</h1>
+    <label for="name">Nome:</label>
+    <input type="text" id="name" name="name"><br><br>
+
+    <label for="email">E-mail:</label>
+    <input type="text" id="email" name="email"><br><br>
+
+    <label for="age">Idade:</label>
+    <input type="text" id="age" name="age"><br><br>
+
+    <label for="checkbox">Deseja participar do nosso processo seletivo?</label>
+    <div class="checkbox-option">
+      <input type="checkbox" id="checkbox" name="checkbox" value="Quero participar">
+      <span>Sim, quero participar.</span>
+    </div>
+
+    <label for="select">Qual estado você reside?</label>
+    <select name="select" id="select">
+      <option value="--">--</option>
+      <option value="SP">SP</option>
+      <option value="RS">RS</option>
+    </select>
+
+    <label for="jornada">Qual tipo de jornada de trabalho você prefere?</label>
+    <div class="radio-options">
+      <div>
+        <input type="radio" id="remoto" name="jornada" value="Remoto" class="regular-font">
+        <label for="remoto">Remoto</label>
+      </div>
+      <div>
+        <input type="radio" id="hibrido" name="jornada" value="Híbrido" class="regular-font">
+        <label for="hibrido">Híbrido</label>
+      </div>
+      <div>
+        <input type="radio" id="presencial" name="jornada" value="Presencial" class="regular-font">
+        <label for="presencial">Presencial</label>
+      </div>
+    </div>
+    
+    <input type="submit" value="Enviar">
+  </form>
+
+  <div id="loading" style="display: none;">Carregando...</div>
+
+  <h2>Suas respostas</h2>
+  <table id="responses">
+    <tr>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Idade</th>
+      <th>Processo Seletivo</th>
+      <th>Jornada de Trabalho</th>
+      <th>Estado</th>
+    </tr>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
